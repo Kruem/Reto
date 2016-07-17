@@ -1,0 +1,34 @@
+<% content_for :head do %>
+ <title>Mascotas</title>
+<% end %>
+
+
+
+<h1>Sistema de registro de mascotas</h1>
+ <!-- Table -->
+
+<div class="row center-xs">
+   <div class="col-xs-6">
+       <div class="box">
+         <table>
+           <tr>
+           <th> Nombre</th>
+           <th>Edad</th>
+           <th>Raza</th>
+         </tr>
+
+        <% @pets.each do |pet| %>
+           <tr>
+             <td><%= pet.name %></td>
+             <td><%= pet.age%></td>
+             <td><%= pet.race%></td>
+             <td><%= link_to "Agregar", new_pet_path(pet)%></td>
+             <td><%= link_to  "fecha", new_pet_calendar_path(pet) %></td>
+
+           </tr>
+
+         <% end %>
+        </table>
+       </div>
+   </div>
+</div>

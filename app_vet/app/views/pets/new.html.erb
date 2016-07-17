@@ -1,0 +1,37 @@
+<% content_for :head do %>
+ <title>Ingresar-Mascota</title>
+<% end %>
+<h1>Ingrese la Mascota </h1>
+
+<div class="row center-xs">
+    <div class="col-xs-6">
+        <div class="box">
+          <%= form_for @pet do |t| %>
+            <p>
+              <%= t.label :name," name" %><br>
+              <%= t.text_field :name %>
+            </p>
+            <p>
+              <%= t.label :age," Edad" %><br>
+              <%= t.text_field :age %>
+            </p>
+            <p>
+              <%= t.label :race," Raza" %><br>
+              <%= t.text_field :race %>
+            </p>
+            <p>
+              <%= t.label :day," Dia" %><br>
+              <%= t.text_field :day %>
+            </p>
+            <p>
+              <%= t.label :time," Hora" %><br>
+              <%= t.text_field :time %>
+            </p>
+            <p>
+              <%= t.submit "Guardar"%>
+            </p>
+          <% end %>
+
+        </div>
+    </div>
+</div>

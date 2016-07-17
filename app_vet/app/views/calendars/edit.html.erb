@@ -1,0 +1,21 @@
+
+
+<h1>Editar la Cita </h1>
+
+<%= form_for @calendar do |t| %>
+  <p>
+    <%= t.label :time," Hora" %><br>
+    <%= t.text_field :time %>
+  </p>
+  <p>
+    <%= t.label :day, "Dia" %><br>
+    <%= t.select(:day) do %>
+    <% [['Lunes'], ['Martes'], ['Miercoles'], ['Jueves'], ['Viernes']].each do |c| -%>
+      <%= content_tag(:option, c.first, value: c.last) %>
+
+    <% end %>
+  <% end %>
+
+    <%= t.submit "Guardar" %>
+  </p>
+<% end %>

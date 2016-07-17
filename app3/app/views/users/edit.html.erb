@@ -1,0 +1,20 @@
+<h1>Editar los datos del usuario </h1>
+
+<%= form_for @user do |t| %>
+  <p>
+    <%= t.label :name," name" %><br>
+    <%= t.text_field :name %>
+  </p>
+  
+   <p>
+    <%= t.label :tower,"torre " %><br>
+    <%= t.text_field :tower %>
+  </p>
+  <p>
+    <%= t.label :aparment,"Apartamento" %><br>
+    <%= t.text_field :aparment %>
+  </p>
+  <p>
+    <%= t.submit %>
+  </p>
+<% end %>

@@ -1,0 +1,32 @@
+<% content_for :head do %>
+ <title>Ingresar-Citas</title>
+<% end %>
+
+<h1>Menu</h1>
+
+
+<div class="row center-xs">
+    <div class="col-xs-6">
+        <div class="box">
+          <h1>Ingrese la Cita </h1>
+
+          <%= form_for [@pet,@calendar] do |t| %>
+            <p>
+              <%= t.label :time," Hora" %><br>
+              <%= t.text_field :time %>
+            </p>
+            <p>
+              <%= t.label :day, "Dia" %><br>
+              <%= t.select(:day) do %>
+              <% [['Lunes'], ['Martes'], ['Miercoles'], ['Jueves'], ['Viernes']].each do |c| -%>
+              <%= content_tag(:option, c.first, value: c.last) %>
+              <% end %>
+            <% end %>
+
+              <%= t.submit "Guardar" %>
+            </p>
+          <% end %>
+
+        </div>
+    </div>
+</div>

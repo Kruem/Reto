@@ -1,0 +1,19 @@
+<h1>Editar el apartamento </h1>
+
+
+<%= form_for [@tower,@apartment] do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+  
+  <p>
+    <%= f.label :torre_id %><br>
+    <%= f.text_field :tower_id%>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+ 
+<%= link_to 'Ver Lista de apartamentos', tower_apartments_path %>
