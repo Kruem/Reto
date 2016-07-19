@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @factura.nombre %>
+</p>
+
+<p>
+  <strong>Apellido:</strong>
+  <%= @factura.apellido %>
+</p>
+
+<p>
+  <strong>Cedula:</strong>
+  <%= @factura.cedula %>
+</p>
+
+<p>
+  <strong>Producto:</strong>
+  <%= @factura.producto %>
+</p>
+
+<p>
+  <strong>Precio:</strong>
+  <%= @factura.precio %>
+</p>
+
+<p>
+  <strong>Iva:</strong>
+  <%= @factura.iva %>
+</p>
+
+<p>
+  <strong>Descuento:</strong>
+  <%= @factura.descuento %>
+</p>
+
+<%= link_to 'Edit', edit_factura_path(@factura) %> |
+<%= link_to 'Back', facturas_path %>
