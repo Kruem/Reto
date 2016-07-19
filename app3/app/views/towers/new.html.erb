@@ -1,16 +1,24 @@
-<h1>Ingrese la torre </h1>
 
-<%= form_for @tower do |t| %>
-  <p>
-    <%= t.label :name," torre" %><br>
-    <%= t.text_field :name %>
-  </p>
-  
-   <p>
-    <%= t.label :level,"Piso " %><br>
-    <%= t.text_field :level %>
-  </p>
-  <p>
-    <%= t.submit %>
-  </p>
-<% end %>
+<div class="row center-xs">
+    <div class="col-xs-6">
+        <div class="box">
+          <h1>Ingrese la torre </h1>
+          <hr>
+          <%= form_for @tower do |t| %>
+            <p>
+              <%= t.label :name," torre" %><br>
+              <%= t.text_field :name %>
+            </p>
+
+             <p>
+              <%= t.label :level,"Piso " %><br>
+              <%= t.text_field :level %>
+            </p>
+            <hr>
+            <p>
+              <%= t.submit "Guardar" %>
+            </p>
+          <% end %>
+        </div>
+    </div>
+</div>

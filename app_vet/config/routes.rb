@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'welcomes/index'
+
+  get 'welcome/index'
+
+  get 'users/index'
+
+  get 'users/new'
+
   get 'pets/index'
 
   get 'calendars/index'
@@ -6,14 +14,15 @@ Rails.application.routes.draw do
   resources :pets do
   resources :calendars
   end
-
+  resources :users
+  resources :welcomes
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-    root 'pets#index' 
+    root 'welcomes#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

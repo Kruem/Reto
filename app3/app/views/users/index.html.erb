@@ -1,24 +1,31 @@
-<h1>Bienvenido al sistema de registro de usuarios</h1>
 
 
+<div class="row center-xs">
+  <div class="col-xs-10">
+    <div class="box">
+  <h1>sistema de registro de usuarios</h1>
+  <hr>
+        <!-- Table -->
+        <table class="table">
+          <tr>
+          <th> Usuario</th>
+          <th>Torre</th>
+          <th>Apartamento</th>
+        </tr>
 
-  <!-- Table -->
-  <table class="table">
-    <tr>
-    <th> Usuario</th>
-    <th>Torre</th>
-    <th>Apartamento</th>
-  </tr>
- 
- <% @users.each do |user| %>
-    <tr>
-      <td><%= user.name %></td>
-      <td><%=user.tower %></td>
-      <td><%= link_to "Editar", edit_user_path(user) %></td>
-      <td><%= link_to  "Agregar un nuevo usuario", new_user_path(user) %></td>
-    <td><%= link_to "Eliminar", user_path(user),method: :delete, data:{confirm:"estas seguro?"} %></td>
-     
+       <% @users.each do |user| %>
+          <tr>
+            <td><%= user.name %></td>
+            <td><%=user.tower %></td>
+            <td><%= link_to "Editar", edit_user_path(user) %></td>
+            <td><%= link_to  "Agregar usuario", new_user_path(user) %></td>
+          <td><%= link_to "Eliminar", user_path(user),method: :delete, data:{confirm:"estas seguro?"} %></td>
 
-    </tr>
-  <% end %>
-</table>
+
+          </tr>
+        <% end %>
+      </table>
+
+    </div>
+  </div>
+</div>

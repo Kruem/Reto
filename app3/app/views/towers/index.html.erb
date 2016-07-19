@@ -1,21 +1,27 @@
- <h1>Sistema de registro de torres</h1>
+
   <!-- Table -->
-  <table>
-    <tr>
-    <th> Torre</th>
-    <th>Portero</th>
-  </tr>
+  <div class="row center-xs">
+    <div class="box">
+       <h1>Sistema de registro de torres</h1>
+       <hr>
+      <table>
+        <tr>
+        <th> Torre</th>
+        <th>Portero</th>
+      </tr>
 
- <% @towers.each do |tower| %>
-    <tr>
-      <td><%= tower.name %></td>
-      <td><%= tower.level%></td>
-      <td><%= link_to "Editar", edit_tower_path(tower) %></td>
-      <td><%= link_to 'Agregar', tower_path(tower) %></td>
-    <td><%= link_to "Eliminar", tower_path(tower),method: :delete, data:{confirm:"estas seguro?"} %></td>
-     <td><%= link_to  "Apartamento", new_tower_apartment_path(tower) %></td>
+     <% @towers.each do |tower| %>
+        <tr>
+          <td><%= tower.name %></td>
+          <td><%= tower.level%></td>
+          <td><%= link_to "Editar", edit_tower_path(tower) %></td>
+          <td><%= link_to 'Agregar', new_tower_path(tower) %></td>
+        <td><%= link_to "Eliminar", tower_path(tower),method: :delete, data:{confirm:"estas seguro?"} %></td>
+         <td><%= link_to  "Apartamento", new_tower_apartment_path(tower) %></td>
 
 
-    </tr>
-  <% end %>
-</table>
+        </tr>
+      <% end %>
+    </table>
+    </div>
+  </div>

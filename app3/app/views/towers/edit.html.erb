@@ -1,16 +1,22 @@
-<h1>Editar la torre </h1>
+<div class="row center-xs">
+  <div class="box">
+    <h1>Editar la torre </h1>
+    <hr>
+    <%= form_for @tower do |t| %>
+      <p>
+        <%= t.label :name," torre" %><br>
+        <%= t.text_field :name %>
+      </p>
 
-<%= form_for @tower do |t| %>
-  <p>
-    <%= t.label :name," torre" %><br>
-    <%= t.text_field :name %>
-  </p>
-  
-   <p>
-    <%= t.label :level,"Piso " %><br>
-    <%= t.text_field :level %>
-  </p>
-  <p>
-    <%= t.submit %>
-  </p>
-<% end %>
+       <p>
+        <%= t.label :level,"Piso " %><br>
+        <%= t.text_field :level %>
+      </p>
+      <hr>
+      <p>
+        <%= t.submit "Guardar" %>
+      </p>
+    <% end %>
+
+  </div>
+</div>

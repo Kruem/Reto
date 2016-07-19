@@ -1,0 +1,26 @@
+<div class="row center-xs">
+  <div class="col-xs-6">
+    <div class="box">
+      <h1>Registrar Usuario</h1>
+      <hr>
+      <%= form_for @user do |t| %>
+        <p>
+          <%= t.label :name," name" %><br>
+          <%= t.text_field :name %>
+        </p>
+        <p>
+          <%= t.label :phone," Telefono" %><br>
+          <%= t.text_field :phone %>
+        </p>
+        <p>
+          <%= t.label :email," Email" %><br>
+          <%= t.text_field :email %>
+        </p>
+        <p>
+          <%= t.submit "Guardar"%>
+        </p>
+      <% end %>
+
+    </div>
+  </div>
+</div>
