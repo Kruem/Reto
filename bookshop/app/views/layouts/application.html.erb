@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%= yield :head %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron j-main">
+      <div class="page-header text-center">
+        <h1>Biblioteca <small>BookShop</small></h1>
+      </div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, enim, hic incidunt
+         aspernatur expedita omnis impedit fuga id
+         culpa minima odio! Adipisci modi doloremque
+          repellat vitae ab, minima aspernatur non.</p>
+    </div>
+  </div>
+
+<%= yield :nav %>
+
+<%= yield :cont%>
+
+<%= yield  %>
+
+
+
+<!--footer-->
+<footer>
+  <div class="container">
+    <div class="row ">
+      <div>
+          <a href="#personal">Información Personal</a>
+          <a href="#personal">Información Personal</a>
+          <a href="#personal">Información Personal</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--fin footer-->
+</body>
+</html>

@@ -1,0 +1,47 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+*{
+  margin: 0px;
+  padding: 0px;
+}
+.menu{
+  background-color: rgba(17,18,106,0.4);
+  display: flex;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+
+}
+nav li{
+	flex: auto;
+	border-right: 1px solid rgba(255, 0, 0,.2);
+	text-align: center;
+}
+nav li:last-child{/* atributos para el ultimo de la fila*/
+	border-right: none;
+}
+nav a{
+	color: #eee;
+	text-decoration:none;
+	line-height: 3;
+	display: block;
+}
+nav a:hover{
+	background: rgba(89, 44, 44, 0.4);;
+}
+.j-main{
+  background-color: rgba(17,18,43,0.2);
+}
+//footer
+footer{
+  background: #00171f;
+  color: #fff;
+  padding: 20px 0;
+  flex-direction: row;
+  display: flex;
+
+}
+footer .nav a:hover{
+  text-decoration: underline;
+}

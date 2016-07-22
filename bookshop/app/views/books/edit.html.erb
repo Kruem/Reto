@@ -1,0 +1,14 @@
+<% content_for :head do%>
+<title>books-edit</title>
+<% end%>
+<div class="container">
+  <div class="page-header text-center">
+    <h1>Books <small>Edit</small></h1>
+  </div>
+
+<%= render 'form' %>
+<br>
+<%= link_to 'Show', @book, class:"btn btn-warning"  %> |
+<%= link_to 'Back', books_path, class:"btn btn-warning"  %>
+</div>
+<br>

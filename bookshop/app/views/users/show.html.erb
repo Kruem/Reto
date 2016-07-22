@@ -1,0 +1,22 @@
+<% content_for :head do%>
+<title>Show-User</title>
+<% end %>
+<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="page-header text-center">
+    <h1>Usuarios <small>Show</small></h1>
+  </div>
+  <p>
+    <strong>Name:</strong>
+    <%= @user.name %>
+  </p>
+
+  <p>
+    <strong>Lastname:</strong>
+    <%= @user.lastname %>
+  </p>
+
+  <%= link_to 'Edit', edit_user_path(@user), class:"btn btn-danger" %>
+  <%= link_to 'Back', users_path, class:"btn btn-warning" %>
+
+</div>

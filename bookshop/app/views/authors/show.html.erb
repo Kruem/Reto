@@ -1,0 +1,29 @@
+<% content_for :head do%>
+<title>Autor-Show</title>
+<% end%>
+<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="page-header text-center">
+    <h1>Lista <small>Autores</small></h1>
+  </div>
+
+<p>
+  <strong>Name:</strong>
+  <%= @author.name %>
+</p>
+
+<p>
+  <strong>Lastname:</strong>
+  <%= @author.lastname %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @author.country %>
+</p>
+
+<%= link_to 'Edit', edit_author_path(@author),class:"btn btn-warning" %> |
+<%= link_to 'Back', authors_path, class:"btn btn-warning" %>
+
+</div>
+<br>

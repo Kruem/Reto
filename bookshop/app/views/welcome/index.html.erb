@@ -1,0 +1,32 @@
+<% content_for :head do %>
+<title>Veterinaria</title>
+<% end %>
+<% content_for :nav do %>
+
+<nav class="navbar-static-top" role="navigation">
+  <ul class="menu">
+    <li><%= link_to "Usuario", users_path%></li>
+    <li><%= link_to "Autor", authors_path%></li>
+    <li><%= link_to "Libros", books_path%></li>
+  </ul
+</nav>
+<% end %>
+
+<% content_for :cont do%>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6 col-md-3">
+      <aside class="thumbnail">
+          <%= image_tag "images.png", :alt => "Google +", :title => "Google +"%>
+      </aside>
+    </div>
+    <div class="col-xs-6 col-md-3">
+      <aside class="thumbnail">
+          <%= image_tag "images.png", :alt => "Google +", :title => "Google +"%>
+      </aside>
+
+    </div>
+  </div>
+</div>
+<% end %>
