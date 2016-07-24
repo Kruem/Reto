@@ -1,0 +1,36 @@
+<%= form_for(@ticket) do |f| %>
+  <% if @ticket.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ticket.errors.count, "error") %> prohibited this ticket from being saved:</h2>
+
+      <ul>
+      <% @ticket.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+
+    <%=f.select :name, Passenger.all.collect {|u| [u.name]},class:"form-control"%>
+  </div>
+  <div class="field">
+    <%= f.label :flights_id %><br>
+    <%=f.select :flights_id, Route.all.collect {|u| [u.city_d_id]},class:"form-control" %>
+
+  </div>
+  <div class="field">
+    <%= f.label :passenger_id %><br>
+    <%= f.number_field :passenger_id %>
+
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%=f.select :price, Flight.all.collect {|u| [u.price]},class:"form-control" %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Comprar" %>
+  </div>
+<% end %>

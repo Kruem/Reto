@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Flight:</strong>
+  <%= @flight_passenger.flight_id %>
+</p>
+
+<p>
+  <strong>Passenger:</strong>
+  <%= @flight_passenger.passenger_id %>
+</p>
+
+<%= link_to 'Edit', edit_flight_passenger_path(@flight_passenger) %> |
+<%= link_to 'Back', flight_passengers_path %>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Airline</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron j-main">
+      <div class="page-header text-center">
+        <h1>Aerolinea <small>BookShop</small></h1>
+      </div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, enim, hic incidunt
+         aspernatur expedita omnis impedit fuga id
+         culpa minima odio! Adipisci modi doloremque
+          repellat vitae ab, minima aspernatur non.</p>
+    </div>
+  </div>
+<div class="container">
+  <ul class="nav nav-pills">
+    <li class="active"><a href="#">Inicio</a></li>
+    <li><%= link_to "pasaje" , tickets_path%></li>
+    <li><%= link_to "vuelos", flights_path%></li>
+    <li><%= link_to "Pilotos" , pilots_path%></li>
+    <li><%= link_to "Pasajeros" , passengers_path%></li>
+      <li><%= link_to "Aviones" , airplanes_path%></li>
+      <li><%= link_to "Rutas" , routes_path%></li>
+    <li><%= link_to "Ciudad" , cities_path%></li>
+  </ul>
+</div>
+
+
+
+
+
+
+
+<%= yield %>
+
+</body>
+</html>
